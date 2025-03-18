@@ -16,6 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .logo {
@@ -25,7 +26,6 @@ header {
     background: #f29304;
     color: #F5F5F5;
     width: 100%;
-    margin-top: 10px; 
     padding: 10px;
     display: flex;
     flex-direction: column;
