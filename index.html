@@ -3,25 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Historial360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
+
     <header>
-        <h1>Welcome to My Landing Page</h1>
-        <p>A simple starter template to build upon.</p>
-        <a href="#about" class="btn">Learn More</a>
+        <div class="header-container">
+            <img src="Images/Plaholder logo.png" alt="Logo"class="logo" >
+            <button class="btn">¡Comprar Ahora!</a></button>
+        </div>
+        <div class="divider">
+            <strong>¡Aprovecha nuestra oferta de lanzamiento: 35,900 COP!</strong>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>This is where you can introduce your product, service, or personal brand.</p>
+    <section class="hero" style="background-color: black;">
+        <h1><span class="resaltado">Historial360</span> de Chekar</h1>
+        <h2>El documento que necesitas para una compra segura de tu vehículo usado.</h2>
+        <p>Consulta al instante toda la información del vehículo antes de tomar una decisión</p>
+        <button class="btn">¡Mira un ejemplo!</button>
     </section>
 
+    <section class="info">
+        <strong>Con el <span class="resaltado">Historial 360 de Chekar</span>, protege tu inversión y conoce todo acerca del vehículo que vas a adquirir:</strong>
+    </section>
+    
+    <div class="card-container" id="card-container">
+        <!-- Cards will be dynamically inserted here -->
+    </div>
+    <section class="info" style="display: flex;
+    flex-direction: column;
+    align-items: center;">
+        <strong>Negocia con confianza, evita estafas, asegura tu inversión</strong>
+        <button class="btn">¡Comprar Ahora!</button>
+    </section>
+    <div class="divider">
+        <strong>Ellos Han confiado en el Historial 360</strong>
+        <div class="carousel-container">
+            <button class="prev-btn">&#10094;</button>  <!-- Left Arrow -->
+            
+            <div class="carousel">
+                <!-- Reviews will be inserted dynamically -->
+            </div>
+    
+            <button class="next-btn">&#10095;</button>  <!-- Right Arrow -->
+        </div>
+    </div>
+    <script src="script.js?v=2"></script>
     <footer>
-        <p>&copy; 2025 My Landing Page. All rights reserved.</p>
+        <p>¡Si tienes preguntas, no dudes en contactarnos!</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
