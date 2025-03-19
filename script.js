@@ -3,50 +3,56 @@ const cardData = [
     { 
         frontText: "Historial Jurídico", 
         features: ["Prendas", "Embargos", "Órdenes de Decomiso"],
-        frontImg: "https://via.placeholder.com/200x300/3498db/FFFFFF?text=Historial+Jurídico", 
-        backText: "Más detalles", 
+        frontImg: "Images/Cards/Juridico.jpg", 
+        backTitle: "Restricciones", 
+        backText: "Te damos un resumen completo de todo lo que le ha pasado al vehículo legalmente. Y si tiene alguna medida cautelar, o embargo que no permita el traspaso.",  
         backImg: "https://via.placeholder.com/200x300/e74c3c/FFFFFF?text=Más+Detalles",
-        icon: "⚖️" // Unicode icon (can be replaced with an <img> tag)
+        icon: "Images/Cards/CardIcons/Hammer.png" // Unicode icon (can be replaced with an <img> tag)
     },
     { 
         frontText: "Propietarios", 
         features: ["Lista de Históricos"],
-        frontImg: "https://via.placeholder.com/200x300/2ecc71/FFFFFF?text=Propietarios", 
-        backText: "Información de Dueños", 
+        frontImg: "Images/Cards/Propietarios.jpg", 
+        backTitle: "Propietarios", 
+        backText: "Te contamos cuántos propietarios ha tenido el vehículo y el tiempo que estuvo con cada uno.",  
         backImg: "https://via.placeholder.com/200x300/8e44ad/FFFFFF?text=Dueños",
-        icon: "🏠"
+        icon: "Images/Cards/CardIcons/Hammer.png"
     },
     { 
-        frontText: "Historial de Accidentes", 
+        frontText: "Accidentes", 
         features: ["Reportes Policía Nacional", "Gravedad", "Víctimas/Heridos"],
-        frontImg: "https://via.placeholder.com/200x300/f1c40f/FFFFFF?text=Accidentes", 
-        backText: "Accidentes Registrados", 
+        frontImg: "Images/Cards/Historial de Accidentes.jpg", 
+        backTitle: "Accidentes Registrados", 
+        backText: "Incluye un historial de los accidentes reportados por policía nacional, junto con su gravedad y si hubo víctimas fatales o heridos.",  
         backImg: "https://via.placeholder.com/200x300/d35400/FFFFFF?text=Accidentes",
-        icon: "🚧"
+        icon: "Images/Cards/CardIcons/Accidentes.png"
     },
     { 
         frontText: "Kilometraje", 
         features: ["Comparación del uso de tu carro frente al mercado"],
-        frontImg: "https://via.placeholder.com/200x300/f1c40f/FFFFFF?text=Accidentes", 
-        backText: "Accidentes Registrados", 
+        frontImg: "Images/Cards/Kilometraje.jpg", 
+        backTitle: "Kilometraje", 
+        backText: "Te damos una comparación con los otros vehículos iguales del mercado con respecto al kilometraje que tiene el vehículo.",  
         backImg: "https://via.placeholder.com/200x300/d35400/FFFFFF?text=Accidentes",
-        icon: "🚧"
+        icon: "Images/Cards/CardIcons/Kilometraje.png"
     },
     { 
-        frontText: "Verificación & Opciones", 
-        features: ["De financiación y asegurabilidad disponibles para tí"],
-        frontImg: "https://via.placeholder.com/200x300/f1c40f/FFFFFF?text=Accidentes", 
-        backText: "Accidentes Registrados", 
+        frontText: "Financiación & Asegurabilidad", 
+        features: ["Verificación","Opciones disponibles para tí"],
+        frontImg: "Images/Cards/Financiacion y asegurabilidad.jpg", 
+        backTitle: "Financiación & Asegurabilidad", 
+        backText: "Te contamos si el vehículo es financiable y asegurable. También te mostramos opciones de financiación ",  
         backImg: "https://via.placeholder.com/200x300/d35400/FFFFFF?text=Accidentes",
-        icon: "🚧"
+        icon: "Images/Cards/CardIcons/Financiacion.png"
     },
     { 
         frontText: "Valor de Venta", 
         features: ["Con la última información del mercado"],
-        frontImg: "https://via.placeholder.com/200x300/f1c40f/FFFFFF?text=Accidentes", 
-        backText: "Accidentes Registrados", 
+        frontImg: "Images/Cards/Valor de Venta.jpeg", 
+        backTitle: "Mercado y Valor", 
+        backText: "Te contamos precios aproximados de venta basándonos en ofertas publicadas en el mercado.",  
         backImg: "https://via.placeholder.com/200x300/d35400/FFFFFF?text=Accidentes",
-        icon: "🚧"
+        icon: "Images/Cards/CardIcons/Valor.png"
     }
 ];
 
@@ -64,7 +70,7 @@ cardData.forEach(card => {
     cardElement.innerHTML = `
         <div class="card-inner">
             <!-- Front Side -->
-            <div class="card-front" style="background-image: url('${card.frontImg}');">
+            <div class="card-front" style="background-image: url('Images/Cards/Filtro Gris.png'), url('${card.frontImg}');">
                 <h3>${card.frontText}</h3>
                 <ul class="features-list">
                     ${featureList}
@@ -73,7 +79,9 @@ cardData.forEach(card => {
             
             <!-- Back Side -->
             <div class="card-back" style="background-image: url('${card.backImg}');">
-                <h3><span class="icon">${card.icon}</span> <strong>${card.backText}</strong></h3>
+                <img src="${card.icon}"class="icon">
+                <h3><strong>${card.backTitle}</strong></h3>
+                <a style="font-weight: lighter;">${card.backText}</a>
             </div>
         </div>
     `;
