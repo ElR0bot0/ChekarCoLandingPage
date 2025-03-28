@@ -88,6 +88,9 @@ cardData.forEach(card => {
 
     container.appendChild(cardElement);
 });
+
+
+
 // User reviews array
 const reviews = [
     {

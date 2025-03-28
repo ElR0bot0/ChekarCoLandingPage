@@ -5,7 +5,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-
+.black-filter {
+    background: rgba(0, 0, 0, 0.838); /* Adjust opacity (0.5 = 50% darker) */
+}
 /* Estilo del header */
 header {
     width: 100%;
@@ -16,9 +18,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
-
+.img-header{
+    width: 70%;
+}
 .logo {
     width: 200px;
 }
@@ -54,32 +60,31 @@ nav ul li a:hover {
 /* Sección Hero */
 
 
-.hero {
+.banner {
     text-align: center;
     background: #F5F5F5;
     color: #F5F5F5;
-    padding: 80px 20px 40px 20px;
     background-image: url(Images/Handshake.jpg);
     background-size: cover;
 }
 
-.hero h1 {
+.banner h1 {
     font-size: 36px;
 }
-.hero h2 {
-    margin-bottom: 50px;
+.banner h2 {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .resaltado {
     color: #f29304; /* Cambia a cualquier color */
 }
-.hero p {
+.banner p {
     font-size: 18px;
     margin: 15px 0;
 }
-.infographic {
+.infographic-background {
     text-align: center;
     color: #F5F5F5;
-    padding: 80px 20px 40px 20px;
     background-image: url(Images/Planning.jpg);
     background-size: cover;
     display: flex;
@@ -87,20 +92,20 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-.infographic h1 {
+.infographic-background h1 {
     font-size: 36px;
 }
-.infographic h2 {
+.infographic-background h2 {
     margin-bottom: 50px;
 }
-.infographic p {
+.infographic-background p {
     font-size: 18px;
     margin: 15px 0;
 }
 .btn {
     display: inline-block;
     padding: 12px 18px;
-    margin-top: 20px;
+    margin-top: 10px;
     background: #f29304;
     color: #F5F5F5;
     text-decoration: none;
@@ -116,6 +121,7 @@ nav ul li a:hover {
 
 /* Sección de Características */
 .info {
+    font-size: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -132,7 +138,8 @@ nav ul li a:hover {
 
 .info p {
     color: #555;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 /* Footer */
@@ -188,7 +195,6 @@ footer {
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: 16px;
     font-weight: bold;
     padding: 15px;
     background-color: #dfdfdf;
@@ -198,6 +204,7 @@ footer {
 .card-front {
     background-size: cover;
     background-position: center;
+    font-size: 16px;
 }
 
 /* Back side */
@@ -209,6 +216,7 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     color: black;
+    font-size: 14px;
 }
 
 /* Features list */
@@ -232,6 +240,7 @@ footer {
 
 /* Carousel container */
 .carousel-container {
+    height: 200px;
     position: relative;
     width: 400px;
     max-width: 90%;
@@ -243,13 +252,7 @@ footer {
     overflow: hidden;
 }
 
-/*Infographic*/
 
-/* Container */
-.infographic-container {
-    position: relative;
-    max-width: 400px;
-}
 
 /* Title */
 h2 {
@@ -379,11 +382,11 @@ h2 {
 }
 
 .prev-btn {
-    left: -30px;
+    left: -1px;
 }
 
 .next-btn {
-    right: -30px;
+    right: -1px;
 }
 .footer {
     background:  url('Images/Footer.jpg') no-repeat center center/cover;
@@ -399,7 +402,6 @@ h2 {
 /* Footer Container */
 .footer-container {
     width: 100%;
-    background: rgba(0, 0, 0, 0.838); /* Adjust opacity (0.5 = 50% darker) */
     padding: 10px;
 }
 
@@ -433,10 +435,13 @@ h2 {
     margin-bottom: 10px;
 }
 /* Responsive */
-@media (max-width: 500px) {
-    .prev-btn, .next-btn {
-        font-size: 20px;
-        left: -20px;
-        right: -20px;
+@media (max-width: 370px) {
+    .carousel-container{
+     height: 220px;
+    }
+}
+@media (max-width: 230px) {
+    .carousel-container{
+     height: 230px;
     }
 }
